@@ -10,36 +10,55 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
 
-body { background:#0b0f1a; color:white; scroll-behavior:smooth; }
+body {
+    background:#0b0f1a;
+    color:white;
+    scroll-behavior:smooth;
+}
 
-section { padding:70px 12%; }
+section {
+    padding:60px 12%;
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp 0.8s ease forwards;
+}
+
+section:nth-child(1){animation-delay:0.2s;}
+section:nth-child(2){animation-delay:0.4s;}
+section:nth-child(3){animation-delay:0.6s;}
+section:nth-child(4){animation-delay:0.8s;}
+section:nth-child(5){animation-delay:1s;}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
 .hero {
-    height:88vh;
+    height:85vh;
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
-    padding-top:90px;
+    padding-top:80px;
 }
 
 h1 {
-    font-size:3.3rem;
+    font-size:3.2rem;
     font-weight:800;
-    margin-bottom:35px;
+    margin-bottom:40px;
 }
 
-.highlight-title {
-    background:linear-gradient(90deg,#00e0ff,#00aaff);
-    padding:4px 10px;
-    border-radius:8px;
-    color:#0b0f1a;
+.blue-text {
+    color:#00bfff;
 }
 
 .subtitle {
-    font-size:1.15rem;
+    font-size:1.2rem;
     color:#cbd5e1;
-    margin-bottom:18px;
+    margin-bottom:22px;
 }
 
 .name-highlight {
@@ -49,8 +68,8 @@ h1 {
 
 .btn {
     display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
+    margin-top:35px;
+    padding:16px 38px;
     background:#00e0ff;
     color:#0b0f1a;
     font-weight:600;
@@ -59,61 +78,77 @@ h1 {
     transition:0.3s;
 }
 
-.btn:hover { background:white; transform:translateY(-3px); }
-
-h2 {
-    font-size:2.2rem;
-    margin-bottom:50px;
-    font-weight:700;
+.btn:hover {
+    background:white;
+    transform:translateY(-4px);
 }
 
-.section-tight { padding-top:30px; }
+h2 {
+    font-size:2.3rem;
+    margin-bottom:60px;
+    font-weight:700;
+    background:linear-gradient(90deg,#00e0ff,#00aaff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.section-tight { padding-top:20px; }
 
 .grid-3 {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:45px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:50px;
 }
 
 .card {
     background:#111827;
-    padding:40px;
+    padding:45px;
     border-radius:20px;
     transition:0.3s;
-    font-size:1.05rem;
 }
 
-.card:hover { background:#1f2937; transform:translateY(-6px); }
+.card:hover {
+    background:#1f2937;
+    transform:translateY(-8px);
+}
+
+.card p {
+    font-size:1.1rem;
+    margin-bottom:12px;
+}
 
 .small-title {
-    font-size:0.95rem;
+    font-size:1rem;
     color:#00e0ff;
     font-weight:600;
-    margin-top:18px;
-    margin-bottom:10px;
+    margin-top:20px;
+    margin-bottom:12px;
     text-transform:uppercase;
 }
 
 .highlight { color:#00e0ff; font-weight:600; }
 
 .apport p {
-    margin-bottom:22px;
+    margin-bottom:24px;
     line-height:1.8;
-    font-size:1.1rem;
+    font-size:1.15rem;
 }
 
 .timeline {
     border-left:2px solid #00e0ff;
-    padding-left:30px;
+    padding-left:35px;
 }
 
 .timeline-item {
-    margin-bottom:45px;
-    font-size:1.08rem;
-    line-height:1.7;
+    margin-bottom:50px;
+    font-size:1.15rem;
+    line-height:1.8;
 }
 
-.contact p { margin-bottom:18px; font-size:1.1rem; }
+.contact p {
+    margin-bottom:20px;
+    font-size:1.15rem;
+}
 
 .footer {
     background:#05070d;
@@ -129,7 +164,7 @@ h2 {
 <section class="hero">
     <h1>
         Je ne cherche pas une alternance.<br>
-        Je cherche <span class="highlight-title">une entreprise à faire performer.</span>
+        Je cherche <span class="blue-text">une entreprise à faire performer.</span>
     </h1>
 
     <div class="subtitle">
@@ -154,7 +189,7 @@ h2 {
     <div class="grid-3">
 
         <div class="card">
-            <h3>Expérience client</h3>
+            <h3>🛍️ Expérience client</h3>
 
             <div class="small-title">Conseiller vendeur – Sephora</div>
             <p>Accueil et conseil client premium</p>
@@ -170,7 +205,7 @@ h2 {
         </div>
 
         <div class="card">
-            <h3>Business & Gestion</h3>
+            <h3>📊 Business & Gestion</h3>
 
             <div class="small-title">Président du BDE</div>
             <p>Gestion financière</p>
@@ -187,7 +222,7 @@ h2 {
         </div>
 
         <div class="card">
-            <h3>Marketing digital</h3>
+            <h3>💻 Marketing digital</h3>
             <p>SEO / Réseaux sociaux</p>
             <p>WordPress</p>
             <p>Canva</p>
@@ -204,19 +239,19 @@ h2 {
 
     <div class="card apport">
         <p><span class="highlight">Une capacité à vendre et convaincre</span><br>
-        Expérience terrain réelle avec gestion client, argumentation et relation commerciale.</p>
+        Expérience terrain réelle avec argumentation, relation client et gestion commerciale.</p>
 
-        <p><span class="highlight">Une communication impactante</span><br>
-        Développée grâce au concours d’éloquence et à mes responsabilités étudiantes.</p>
+        <p><span class="highlight">Une communication claire et impactante</span><br>
+        Développée grâce au concours d’éloquence et à la gestion d’équipes étudiantes.</p>
 
         <p><span class="highlight">Une vision marketing structurée</span><br>
-        Projets concrets en BUT TC avec objectifs, deadlines et résultats mesurables.</p>
+        Projets concrets en BUT TC avec objectifs mesurables et stratégie définie.</p>
 
         <p><span class="highlight">Une gestion de projet efficace</span><br>
-        Organisation d’événements et coordination d’équipes en tant que Président du BDE.</p>
+        Organisation d’événements, coordination et respect des deadlines.</p>
 
         <p><span class="highlight">Adaptabilité et esprit d’analyse</span><br>
-        Capacité à comprendre rapidement un environnement et proposer des solutions.</p>
+        Compréhension rapide des environnements professionnels.</p>
 
         <p><span class="highlight">Énergie positive</span><br>
         Je peux vous apporter des rires et des sourires, bonne entente assurée !</p>
@@ -238,6 +273,22 @@ h2 {
         </div>
 
         <div class="timeline-item">
+            <h3>Super U – Hôte de caisse (Été 2025 + CDI temps partiel)</h3>
+            <p>Gestion flux client</p>
+            <p>Encaissement</p>
+            <p>Logistique magasin</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Sephora – Conseiller vendeur (Janvier 2025)</h3>
+            <p>Accueil client</p>
+            <p>Conseils client</p>
+            <p>Ventes et encaissement</p>
+            <p>Mise en rayon / plan merchandising</p>
+            <p>Gestion des stocks / logistique</p>
+        </div>
+
+        <div class="timeline-item">
             <h3>BUT Techniques de Commercialisation – UVSQ (Septembre 2024)</h3>
             <p>Marketing digital et e-business</p>
             <p>Négociation commerciale</p>
@@ -247,7 +298,6 @@ h2 {
         <div class="timeline-item">
             <h3>Baccalauréat STMG – Option Ressources Humaines (2024)</h3>
             <p>Mention Assez Bien</p>
-            <p>Découverte management et gestion</p>
         </div>
 
         <div class="timeline-item">
@@ -259,7 +309,6 @@ h2 {
         <div class="timeline-item">
             <h3>Stephane Renaud – Stage 3ème Education Canine (2021)</h3>
             <p>Découverte du monde professionnel</p>
-            <p>Observation et assistance</p>
         </div>
 
     </div>
@@ -273,7 +322,7 @@ h2 {
         <p>📍 Saint-Arnoult-en-Yvelines</p>
         <p>📞 07 67 73 97 42</p>
         <p>📩 enzo.achaintre@yahoo.com</p>
-        <p>🔗 LinkedIn : @Enzo Achaintre</p>
+        <p>🔗 LinkedIn : Enzo Achaintre</p>
     </div>
 
     <a href="mailto:enzo.achaintre@yahoo.com" class="btn">
