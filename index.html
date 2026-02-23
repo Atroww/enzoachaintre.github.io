@@ -12,33 +12,34 @@
 
 body { background:#0b0f1a; color:white; scroll-behavior:smooth; }
 
-section { padding:80px 12%; }
+section { padding:70px 12%; }
 
 .hero {
-    height:90vh;
+    height:88vh;
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
-    padding-top:100px;
+    padding-top:90px;
 }
 
 h1 {
     font-size:3.3rem;
     font-weight:800;
-    margin-bottom:25px;
+    margin-bottom:35px;
 }
 
-.underline {
-    text-decoration: underline;
-    text-decoration-color:#00e0ff;
-    text-decoration-thickness:3px;
+.highlight-title {
+    background:linear-gradient(90deg,#00e0ff,#00aaff);
+    padding:4px 10px;
+    border-radius:8px;
+    color:#0b0f1a;
 }
 
 .subtitle {
-    font-size:1.1rem;
+    font-size:1.15rem;
     color:#cbd5e1;
-    margin-bottom:12px;
+    margin-bottom:18px;
 }
 
 .name-highlight {
@@ -61,42 +62,44 @@ h1 {
 .btn:hover { background:white; transform:translateY(-3px); }
 
 h2 {
-    font-size:2rem;
-    margin-bottom:40px;
+    font-size:2.2rem;
+    margin-bottom:50px;
     font-weight:700;
 }
+
+.section-tight { padding-top:30px; }
 
 .grid-3 {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:40px;
+    gap:45px;
 }
 
 .card {
     background:#111827;
-    padding:35px;
+    padding:40px;
     border-radius:20px;
     transition:0.3s;
+    font-size:1.05rem;
 }
 
 .card:hover { background:#1f2937; transform:translateY(-6px); }
 
-.section-tight { padding-top:40px; }
-
 .small-title {
-    font-size:0.9rem;
+    font-size:0.95rem;
     color:#00e0ff;
     font-weight:600;
-    margin-top:15px;
-    margin-bottom:8px;
+    margin-top:18px;
+    margin-bottom:10px;
     text-transform:uppercase;
 }
 
 .highlight { color:#00e0ff; font-weight:600; }
 
 .apport p {
-    margin-bottom:18px;
-    line-height:1.7;
+    margin-bottom:22px;
+    line-height:1.8;
+    font-size:1.1rem;
 }
 
 .timeline {
@@ -104,9 +107,13 @@ h2 {
     padding-left:30px;
 }
 
-.timeline-item { margin-bottom:40px; }
+.timeline-item {
+    margin-bottom:45px;
+    font-size:1.08rem;
+    line-height:1.7;
+}
 
-.contact p { margin-bottom:15px; }
+.contact p { margin-bottom:18px; font-size:1.1rem; }
 
 .footer {
     background:#05070d;
@@ -122,7 +129,7 @@ h2 {
 <section class="hero">
     <h1>
         Je ne cherche pas une alternance.<br>
-        Je cherche <span class="underline">une entreprise à faire performer.</span>
+        Je cherche <span class="highlight-title">une entreprise à faire performer.</span>
     </h1>
 
     <div class="subtitle">
@@ -146,7 +153,6 @@ h2 {
 
     <div class="grid-3">
 
-        <!-- EXPERIENCE CLIENT -->
         <div class="card">
             <h3>Expérience client</h3>
 
@@ -163,7 +169,6 @@ h2 {
             <p>Gestion des stocks</p>
         </div>
 
-        <!-- BUSINESS -->
         <div class="card">
             <h3>Business & Gestion</h3>
 
@@ -181,7 +186,6 @@ h2 {
             <p>Nombreux projets à mener et à rendre</p>
         </div>
 
-        <!-- MARKETING DIGITAL -->
         <div class="card">
             <h3>Marketing digital</h3>
             <p>SEO / Réseaux sociaux</p>
@@ -199,19 +203,22 @@ h2 {
     <h2>Ce que je peux vous apporter concrètement</h2>
 
     <div class="card apport">
-        <p><span class="highlight">Une vraie capacité à vendre et convaincre</span><br>
-        Grâce à mon expérience chez Sephora et Super U, je comprends les attentes clients, la relation commerciale et l'importance du service.</p>
+        <p><span class="highlight">Une capacité à vendre et convaincre</span><br>
+        Expérience terrain réelle avec gestion client, argumentation et relation commerciale.</p>
 
-        <p><span class="highlight">Une communication solide et impactante</span><br>
-        Développée lors du concours d’éloquence et renforcée par mes responsabilités étudiantes.</p>
+        <p><span class="highlight">Une communication impactante</span><br>
+        Développée grâce au concours d’éloquence et à mes responsabilités étudiantes.</p>
 
         <p><span class="highlight">Une vision marketing structurée</span><br>
-        Construite en BUT Techniques de Commercialisation, avec des projets concrets, deadlines réelles et objectifs mesurables.</p>
+        Projets concrets en BUT TC avec objectifs, deadlines et résultats mesurables.</p>
 
-        <p><span class="highlight">Une capacité à gérer des projets</span><br>
-        Organisation d’événements, gestion financière et coordination d’équipes en tant que Président du BDE.</p>
+        <p><span class="highlight">Une gestion de projet efficace</span><br>
+        Organisation d’événements et coordination d’équipes en tant que Président du BDE.</p>
 
-        <p><span class="highlight">Une énergie positive</span><br>
+        <p><span class="highlight">Adaptabilité et esprit d’analyse</span><br>
+        Capacité à comprendre rapidement un environnement et proposer des solutions.</p>
+
+        <p><span class="highlight">Énergie positive</span><br>
         Je peux vous apporter des rires et des sourires, bonne entente assurée !</p>
     </div>
 </section>
@@ -223,51 +230,36 @@ h2 {
     <div class="timeline">
 
         <div class="timeline-item">
-            <h3>Stephane Renaud – Stage 3ème Education Canine</h3>
-            <p>Découverte du monde professionnel</p>
-            <p>Observation et assistance dans l’éducation comportementale</p>
+            <h3>Président BDE – UVSQ (Avril 2025 - Juin 2026)</h3>
+            <p>Organisation événements étudiants</p>
+            <p>Gestion financière</p>
+            <p>Festival Inter filière upsaclay</p>
+            <p>Animation des réseaux sociaux</p>
         </div>
 
         <div class="timeline-item">
-            <h3>Association Eloquentia – Concours d’éloquence</h3>
-            <p>Préparation au concours « Est-on vraiment libre ? »</p>
-            <p>Présentation devant 200 personnes et jury professionnel</p>
-            <p>Développement argumentation et aisance orale</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Baccalauréat STMG – Option Ressources Humaines</h3>
-            <p>Mention Assez Bien</p>
-            <p>Découverte du management, RH et gestion</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>BUT Techniques de Commercialisation – UVSQ</h3>
+            <h3>BUT Techniques de Commercialisation – UVSQ (Septembre 2024)</h3>
             <p>Marketing digital et e-business</p>
             <p>Négociation commerciale</p>
             <p>Projets marketing et stratégie</p>
         </div>
 
         <div class="timeline-item">
-            <h3>Sephora – Conseiller vendeur (Janvier 2025)</h3>
-            <p>Relation client premium</p>
-            <p>Vente et conseil personnalisé</p>
-            <p>Merchandising et gestion stock</p>
+            <h3>Baccalauréat STMG – Option Ressources Humaines (2024)</h3>
+            <p>Mention Assez Bien</p>
+            <p>Découverte management et gestion</p>
         </div>
 
         <div class="timeline-item">
-            <h3>Super U – Hôte de caisse (Été 2025 + CDI temps partiel)</h3>
-            <p>Gestion flux client</p>
-            <p>Encaissement</p>
-            <p>Logistique magasin</p>
+            <h3>Association Eloquentia – Concours d’éloquence (2021)</h3>
+            <p>Préparation concours « Est-on vraiment libre ? »</p>
+            <p>Présentation devant 200 personnes</p>
         </div>
 
         <div class="timeline-item">
-            <h3>Président BDE – UVSQ</h3>
-            <p>Organisation événements étudiants</p>
-            <p>Gestion financière</p>
-            <p>Festival Inter filière upsaclay</p>
-            <p>Animation des réseaux sociaux</p>
+            <h3>Stephane Renaud – Stage 3ème Education Canine (2021)</h3>
+            <p>Découverte du monde professionnel</p>
+            <p>Observation et assistance</p>
         </div>
 
     </div>
