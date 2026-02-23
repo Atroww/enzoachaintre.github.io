@@ -25,31 +25,37 @@ section {
     padding: 100px 12%;
 }
 
+.hero {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 120px;
+}
+
 h1 {
     font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.2;
-}
-
-h2 {
-    font-size: 2.2rem;
     margin-bottom: 30px;
-    font-weight: 700;
 }
 
-p {
-    color: #cbd5e1;
+.subtitle {
+    font-size: 1.2rem;
     margin-bottom: 15px;
-    font-size: 1rem;
+    color: #cbd5e1;
 }
 
-.highlight {
+.name-highlight {
     color: #00e0ff;
+    font-weight: 800;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 35px;
     padding: 15px 35px;
     background: #00e0ff;
     color: #0b0f1a;
@@ -64,22 +70,15 @@ p {
     transform: translateY(-3px);
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.subtitle {
-    font-size: 1.3rem;
-    margin-top: 20px;
-    max-width: 600px;
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
@@ -91,8 +90,21 @@ p {
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     background: #1f2937;
+}
+
+.small-title {
+    font-size: 0.9rem;
+    color: #00e0ff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: #00e0ff;
+    font-weight: 600;
 }
 
 .timeline {
@@ -116,85 +128,133 @@ p {
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Je ne cherche pas une alternance.<br>Je cherche une <span class="highlight">entreprise à faire performer.</span></h1>
-    <p class="subtitle">
-        Enzo Achaintre – 19 ans – BUT Techniques de Commercialisation  
-        Spécialisation Marketing Digital & E-business  
-        Rythme : 3 jours entreprise / 2 jours IUT
-    </p>
+    <h1>Je ne cherche pas une alternance.<br>Je cherche une entreprise à faire performer.</h1>
+
+    <div class="subtitle">
+        Sur un rythme de 3 jours en entreprise / 2 jours à l'IUT, à partir de septembre 2026
+    </div>
+
+    <div class="subtitle">
+        BUT Techniques de Commercialisation Spécialisation Marketing Digital & E-business
+    </div>
+
+    <div class="subtitle">
+        <span class="name-highlight">Enzo Achaintre</span> – 19 ans – Permis B en cours
+    </div>
+
     <a href="#contact" class="btn">Me rencontrer</a>
 </section>
 
-<!-- POSITIONNEMENT -->
+<!-- PROFIL -->
 <section>
-    <h2>Un profil orienté terrain + stratégie</h2>
+    <h2>Mon profil orienté Théorie et Pratique</h2>
+
     <div class="grid">
+
         <div class="card">
-            <h3>🎯 Expérience Client</h3>
-            <p>Conseiller vendeur chez Sephora – Vente, merchandising, gestion des stocks, relation client premium.</p>
+            <div class="small-title">Conseiller vendeur – Sephora</div>
+            <p>Accueil et conseil client premium</p>
+            <p>Vente et encaissement</p>
+            <p>Merchandising et mise en rayon</p>
+            <p>Gestion des stocks et logistique</p>
         </div>
+
         <div class="card">
-            <h3>📊 Business & Gestion</h3>
-            <p>Président du BDE – Gestion financière, organisation d’événements, stratégie de communication.</p>
+            <div class="small-title">Hôte de caisse – Super U</div>
+            <p>Encaissement et gestion flux client</p>
+            <p>Conseil client</p>
+            <p>Mise en rayon / facing</p>
+            <p>Gestion des stocks</p>
         </div>
+
         <div class="card">
-            <h3>🚀 Marketing Digital</h3>
-            <p>SEO, Réseaux sociaux, WordPress, Canva, Pack Office, Certification Pix.</p>
+            <div class="small-title">Président du BDE</div>
+            <p>Gestion financière du BDE</p>
+            <p>Organisation d’événements étudiants</p>
+            <p>Organisation festival "Inter filière upsaclay"</p>
+            <p>Gestion et animation des réseaux sociaux</p>
+            <p>Relation avec partenaires extérieurs</p>
         </div>
+
+        <div class="card">
+            <div class="small-title">BUT TC</div>
+            <p>Marketing digital</p>
+            <p>Négociation et techniques de vente</p>
+            <p>Communication commerciale</p>
+            <p>Nombreux projets à mener et à rendre</p>
+        </div>
+
+        <div class="card">
+            <div class="small-title">Marketing Digital</div>
+            <p>SEO / Réseaux sociaux</p>
+            <p>WordPress</p>
+            <p>Canva</p>
+            <p>Pack Office</p>
+            <p>Certification Pix</p>
+        </div>
+
     </div>
 </section>
 
-<!-- PLAN D'ACTION -->
+<!-- APPORT -->
 <section>
-    <h2>Ce que je peux vous apporter</h2>
+    <h2>Ce que je peux vous apporter concrètement</h2>
+
     <div class="card">
-        <p><span class="highlight">Analyse :</span> Comprendre votre cible et votre tunnel de conversion</p>
-        <p><span class="highlight">Activation :</span> Mise en place d’actions marketing digitales mesurables</p>
-        <p><span class="highlight">Optimisation :</span> Amélioration continue basée sur la data</p>
+        <p><span class="highlight">Une vraie capacité à vendre</span> grâce à mon expérience terrain (Sephora, Super U)</p>
+        <p><span class="highlight">Une communication efficace</span> grâce à l’éloquence et aux présentations publiques</p>
+        <p><span class="highlight">Une vision marketing structurée</span> développée en BUT TC</p>
+        <p><span class="highlight">Une gestion de projet concrète</span> via la présidence du BDE</p>
+        <p><span class="highlight">Une énergie positive :</span> je peux vous apporter des rires et des sourires, bonne entente assurée !</p>
     </div>
 </section>
 
-<!-- EXPÉRIENCE -->
+<!-- PARCOURS -->
 <section>
     <h2>Mon parcours</h2>
+
     <div class="timeline">
 
         <div class="timeline-item">
-            <h3>2024 - Aujourd’hui | BUT Techniques de Commercialisation</h3>
-            <p>Marketing digital, e-business, négociation, stratégie commerciale.</p>
+            <h3>Association Eloquentia – Concours d’éloquence</h3>
+            <p>Préparation au concours sur le thème « Est-on vraiment libre ? »</p>
+            <p>Présentation devant 200 personnes et jury composé d’un avocat, metteur en scène, écrivain et journaliste.</p>
+            <p>Développement de l’argumentation et de la prise de parole.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Sephora – Conseiller vendeur (Janvier 2025)</h3>
+            <p>Relation client premium</p>
+            <p>Conseil personnalisé</p>
+            <p>Gestion des stocks et merchandising</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Super U – Hôte de caisse (Été 2025 + CDI temps partiel)</h3>
+            <p>Gestion flux client</p>
+            <p>Encaissement</p>
+            <p>Logistique magasin</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>BUT Techniques de Commercialisation – UVSQ</h3>
+            <p>Marketing digital et e-business</p>
+            <p>Négociation commerciale</p>
+            <p>Stratégie marketing</p>
         </div>
 
         <div class="timeline-item">
             <h3>Président BDE – UVSQ</h3>
-            <p>Organisation d’événements, gestion financière, animation des réseaux sociaux, relations partenaires.</p>
+            <p>Organisation événements (journées, soirées, week-ends)</p>
+            <p>Gestion financière</p>
+            <p>Festival Inter filière upsaclay</p>
         </div>
 
         <div class="timeline-item">
-            <h3>Sephora – Conseiller Vendeur</h3>
-            <p>Vente, conseil client, merchandising, gestion des stocks.</p>
+            <h3>Baccalauréat STMG – Option Ressources Humaines</h3>
+            <p>Mention Assez Bien</p>
         </div>
 
-        <div class="timeline-item">
-            <h3>Super U – Hôte de Caisse</h3>
-            <p>Gestion flux client, encaissement, logistique magasin.</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Concours d’éloquence – Eloquentia</h3>
-            <p>Prise de parole devant 200 personnes – Argumentation & persuasion.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- DIFFÉRENCIATION -->
-<section>
-    <h2>Pourquoi moi ?</h2>
-    <div class="card">
-        <p>✔ Expérience terrain réelle</p>
-        <p>✔ Leadership étudiant</p>
-        <p>✔ Vision marketing orientée performance</p>
-        <p>✔ Capacité à vendre, convaincre et exécuter</p>
     </div>
 </section>
 
@@ -204,11 +264,13 @@ p {
     <p>📍 Saint-Arnoult-en-Yvelines</p>
     <p>📞 07 67 73 97 42</p>
     <p>📩 enzo.achaintre@yahoo.com</p>
+    <p>🔗 LinkedIn : @Enzo Achaintre</p>
+
     <a href="mailto:enzo.achaintre@yahoo.com" class="btn">Me contacter</a>
 </section>
 
 <div class="footer">
-    <p>© 2026 Enzo Achaintre | Marketing Digital</p>
+    <p>© 2026 Enzo Achaintre | Alternance Marketing Digital</p>
 </div>
 
 </body>
